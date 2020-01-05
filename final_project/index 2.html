@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="main.css">
+  <title>US Air Quality Improvement</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/streamgraph.js"></script>  
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/annotations.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+
+</head>
+<body>
+  <h1 style = "padding: 15px 100px">US Air Quality Improvement</h1>
+
+  <div class="container"> 
+  
+      <!-- Full-width images with caption text -->
+      <div class="image-sliderfade fade"> 
+        <img src="sd.jpg" style="width:80%;height : 500px"> 
+        <div class="text" style="width:80%">Clean Air and Good Weather in San Diego!</div> 
+      </div> 
+      
+      <div class="image-sliderfade fade"> 
+        <img src="bj.jpg" style="width:80%;height : 500px"> 
+        <div class="text" style="width:80%">Rank of Severity of Smog in Beijing is 2 within China </div> 
+      </div> 
+      
+      <div class="image-sliderfade fade"> 
+        <img src="la.jpg" style="width:80%;height :500px"> 
+        <div class="text" style="width:80%">How does Los Angeles deal with air pollution?</div> 
+      </div> 
+
+      
+     
+    <script src="image.js"></script>
+    </div> 
+    <br> 
+      
+    <!-- The dots/circles -->
+    <div style="text-align:center"> 
+      <span class="dot"></span>  
+      <span class="dot"></span>  
+      <span class="dot"></span>  
+    </div> 
+    
+
+
+<div class="contain" style='padding:15px 100px 100px 100px '>
+  <ul class="nav nav-tabs"style = "padding: 20px 10px">
+    <li class="active"><a data-toggle="tab" href="#home">Concentration Average</a></li>
+    <li><a data-toggle="tab" href="#menu1">Emission Trends</a></li>
+  </ul>
+
+  <div class="tab-content" style = "padding: 10px 0px 150px 0px">
+    <div id="home" class="tab-pane fade in active">
+      <div id="line" style = "width : 61% ;float: left" ></div>   
+      <script src = "line.js"></script>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <div id ="line2" style = "float: left"></div>
+      <script src = "line2.js"></script>
+      </div>
+      <div id = "discription" style="width:35% ;float : left">
+          <h3>Air Quality Trends Show Clean Air Progress</h3>
+          <p >Nationally, concentrations of air pollutants have dropped significantly since 1990:</p >  
+            <ul>  
+            <li>Carbon Monoxide (CO) 8-Hour, &#8595; 74%</li>  
+            <li>Lead (Pb) 3-Month Average, &#8595; 82% <small>(from 2010)</small></li>  
+            <li>Nitrogen Dioxide (NO<sub>2</sub>) Annual, &#8595; 57%</li>  
+            <li>Nitrogen Dioxide (NO<sub>2</sub>) 1-Hour, &#8595; 50%</li>  
+            <li>Ozone (O<sub>3</sub>) 8-Hour, &#8595; 21%</li>  
+            <li>Particulate Matter 10 microns (PM<sub>10</sub>) 24-Hour, &#8595; 26%</li>  
+            <li>Particulate Matter 2.5 microns (PM<sub>2.5</sub>) Annual, &#8595; 39% <small>(from 2000)</small></li>  
+            <li>Particulate Matter 2.5 microns (PM<sub>2.5</sub>) 24-Hour, &#8595; 34% <small>(from 2000)</small></li>  
+            <li>Sulfur Dioxide (SO<sub>2</sub>) 1-Hour, &#8595; 89%</li>  
+            <li>Numerous air toxics have declined with percentages varying by pollutant</li>  
+            </ul>  
+            <p>During this same period, the U.S. economy continued to grow, Americans drove more miles and population and energy use increased.</p >
+      </div> 
+  </div>
+</div>
+
+<div class='bar' style='width: 100%'>
+<h3 style = "padding: 300px 40px 5px 140px">Understanding the Emission sources of major pollutants</h3>
+<div id ="bar_container" style = "padding: 5px 140px 5px 40px; width :65%; float : right"></div>
+<script src = "emission_bar.js"></script>
+<div id ="description2" style = "padding: 5px 40px 20px 140px; width :35%;height: 500px; float : right">
+    <h4 >Understanding Emission Sources Helps Control Air Pollution</h4>  
+    <p >Generally, emissions of air pollution come from</p >  
+    <ul>  
+    <li>stationary fuel combustion sources (such as electric utilities and industrial boilers),</li>  
+    <li>industrial and other processes (such as metal smelters, petroleum refineries, cement kilns and dry cleaners),</li>  
+    <li>highway vehicles, and</li>  
+    <li>non-road mobile sources (such as recreational and construction equipment, marine vessels, aircraft and locomotives).</li>  
+    </ul>  
+    <p >As the chart shows, pollutants are emitted by a variety of sources. For example, electric utilities, part of the stationary fuel combustion category, release SO<sub>2</sub>, NO<sub>x</sub> and particles.</p >
+</div>
+</div>
+
+<div class='economic' style='width: 100%; height: 500px ;padding: 5px 40px 5px 140px'>
+<h3 >Economic Growth with Clean Air</h4>
+<div id='com_line' style="float: left; width :70%"></div>
+<script src='comparison_line.js'></script>
+<div id ="description2" style ="float: left; width: 30%; padding: 120px 0px 200px 0px">
+    <h4>Economic Growth with Cleaner Air</h4>  
+ <p style ="width: 100%; padding: 0px 100px 0px 0px">Between 1970 and 2018, the combined emissions of the six common pollutants (PM<sub>2.5</sub> and PM<sub>10</sub>, SO<sub>2</sub>, NO<sub>x</sub>, VOCs, CO and Pb) dropped by 74 percent. This progress occurred while the U.S. economy continued to grow, Americans drove more miles and population and energy use increased.</p >  
+ 
+</div>
+
+<div class='map' style='width: 100%;padding: 0px 40px 5px 5px'>
+  <h3>Correlation between PM2.5 and GDP</h3>
+  <div id='myDiv' style='width: 50%; float: left'></div>
+  <script src='choropleth.js'></script>
+  <div id='my' style='width: 50%; float: left'></div>
+  <script src='gdp_choropleth.js'></script>
+  </div>
+</div>
+
+</body>
+</html>
